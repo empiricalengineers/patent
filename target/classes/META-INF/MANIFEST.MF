@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: patent
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: kchellur
+Implementation-Vendor-Id: com.self
+Build-Jdk: 1.8.0_45
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/patent
+Created-By: Maven Integration for Eclipse
+
