@@ -12,15 +12,22 @@ import com.self.patent.model.Patent;
 public class PatentService implements PatentServiceInterface {
 	@Autowired
 	PatentRepository repository;
+
 	@Override
 	public List<Patent> getAll() {
 		return repository.findAll();
 	}
+
 	@Override
 	public Patent get(Long patentID) {
-		Patent patent=repository.findById(patentID).get();
-		return patent;
+		if (repository.findById(patentID) != null && repository.findById(patentID).isPresent()) {
+			Patent patent = repository.findById(patentID).get();
+			return patent;
+		} else {
+			return null;
+		}
 	}
+
 	@Override
 	public Patent save(Patent patent) {
 		return repository.save(patent);
